@@ -1,0 +1,14 @@
+{
+    "query": {
+      "createUser":"INSERT INTO dbo.users (user_name, user_mail,user_password, createdOn) VALUES (%L,%L,%L, GETDATE())" ,
+      "getUsers":"SELECT * from dbo.users",
+      "getmail":"select user_id from dbo.users where user_mail=%L",
+      "getUserByMail": "select * from dbo.users where user_mail=%L",
+      "getProducts":"SELECT * from dbo.products",
+      "createProduct":"INSERT INTO dbo.products (title, price, description, category, imageUrl,  createdOn) VALUES (%L,%L,%L,%L,%L, GETDATE())",
+      "deleteProduct": "DELETE FROM dbo.products WHERE prod_id=%L" ,
+      "getProductById": "select * from dbo.products where prod_id=%L",
+      "updateProductTitle": "UPDATE dbo.products SET title=%L WHERE prod_id=%L"
+    }
+  }
+  
